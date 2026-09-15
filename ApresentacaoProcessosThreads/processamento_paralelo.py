@@ -39,7 +39,7 @@ def trabalhador(id_core, fila_tarefas, fila_resultados):
 if __name__ == "__main__":
     os.system('clear')
     
-    cores_totais = multiprocessing.cpu_count()
+    cores_totais = multiprocessing.cpu_count() / 2
     print("==================================================")
     print(" DEMONSTRAÇÃO: BALANCEAMENTO DINÂMICO DE CARGA ")
     print("==================================================")
