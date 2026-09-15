@@ -43,15 +43,15 @@ if __name__ == "__main__":
     print("==================================================")
     print(" DEMONSTRAÇÃO: BALANCEAMENTO DINÂMICO DE CARGA ")
     print("==================================================")
-    print(f"[!] Cores (núcleos) disponíveis no sistema: {cores_totais}\n")
+    print(f"[!] Quantos balcões estã o disponíveis: {cores_totais}\n")
 
-    x = int(input("Até qual valor (X) verificar primos? (Ex: 5000000): "))
-    cores_alocados = int(input(f"Quantos cores reais deseja utilizar (1 a {cores_totais})? "))
-    total_lotes = int(input(f"Dividir a tarefa em quantos lotes: 0"))
+    x = int(input("Qual o tamanho da fila? (Ex: 5000000): "))
+    cores_alocados = int(input(f"Quantos balcões deseja utilizar? (1 a {cores_totais})? "))
+    total_lotes = int(input(f"Dividir a fila em lotes de quantos clientes: "))
     
     if total_lotes < cores_alocados: tamanho_lote = 80
 
-    print("\nFatiando o trabalho em micro-lotes (Fila de Tarefas)...\n")
+    print("\nFatiando o a fila em micro-lotes (Fila de Tarefas)...\n")
     
     tempo_inicio = time.time()
 
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     print("\n==================================================")
     print("                 RESULTADO FINAL                  ")
     print("==================================================")
-    print(f"Total de números primos encontrados (0 a {x:_}): {len(todos_os_primos):_}".replace('_', '.'))
+    print(f"Total de cupons distribuídos (0 a {x:_}): {len(todos_os_primos):_}".replace('_', '.'))
     print(f"Tempo total de execução: {tempo_execucao:.2f} segundos\n")
 
     # Menu de listagem limpa
